@@ -4,6 +4,7 @@ import (
 	"E3/Config"
 	_ "github.com/go-sql-driver/mysql"
 	_ "log"
+	_ "time"
 )
 
 func CreateOrder(order *Order) (err error) {

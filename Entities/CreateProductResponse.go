@@ -7,3 +7,7 @@ type CreateProductResponse struct {
 	Quantity    int    `json:"quantity"`
 	Message     string `json:"message"`
 }
+
+type CreateProductResponseOnCoolDown struct {
+	Message string `json:"message"`
+}

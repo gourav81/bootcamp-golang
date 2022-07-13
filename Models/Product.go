@@ -40,6 +40,8 @@ func UpdateProduct(product *Product, id string, price int, quantity int) (err er
 }
 
 func DeleteProduct(product *Product, id string) (err error) {
-	Config.DB.Where("id = ?", id).Delete(product)
+	if err = Config.DB.Where("id = ?", id).Delete(product).Error; err != nil {
+		return err
+	}
 	return nil
 }
